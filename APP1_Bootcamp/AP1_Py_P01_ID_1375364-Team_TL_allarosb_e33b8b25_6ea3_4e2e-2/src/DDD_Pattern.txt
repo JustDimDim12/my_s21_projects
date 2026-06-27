@@ -1,0 +1,22 @@
+Architecting the Core Interactions (DDD Pattern)
+To keep layers entirely separate, the GameSession acts as primary Application Service.
+It orchestrates the domain models without exposing them directly to the infrastructure.
+
+┌────────────────────────────────────────────────────────┐
+│                   PRESENTATION LAYER                   │
+│          views.py (Curses Input & Rendering)           │
+└───────────────────────────┬────────────────────────────┘
+                            │ Calls public state API
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│                      DOMAIN LAYER                      │
+│  session.py (GameSession Facade / Orchestrator)        │
+│    ├── Coordinates DungeonGenerator, Combat, & AI      │
+│    └── Exposes Immutable DTOs/Primitives to UI         │
+└───────────────────────────┬────────────────────────────┘
+                            │ Triggers persistence
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│                       DATA LAYER                       │
+│           storage.py (JSON Save/High Scores)           │
+└────────────────────────────────────────────────────────┘
