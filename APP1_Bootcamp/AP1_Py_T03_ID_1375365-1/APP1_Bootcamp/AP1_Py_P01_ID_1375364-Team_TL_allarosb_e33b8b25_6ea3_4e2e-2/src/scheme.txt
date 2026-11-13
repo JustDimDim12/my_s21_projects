@@ -1,0 +1,28 @@
+rogue_game/
+│
+├── main.py                     # Application entry point
+│
+├── domain/                     # Pure Business Logic (No dependencies)
+│   ├── __init__.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── characters.py       # Player & Enemy classes
+│   │   ├── item.py             # Weapons, scrolls, potions, backpack
+│   │   ├── map.py              # Levels, rooms, corridors, positions
+│   │   └── visibility.py       # VisibilityMap. Tracking player exploration telemetry
+│   └── services/
+│       ├── __init__.py
+│       ├── combat.py           # CombatEngine
+│       ├── difficulty_balancer.py # Responsible for calculating Dynamic Difficulty Adjustment (DDA).
+│       ├── enemy_ai.py         # EnemyAIEngine
+│       ├── fov.py              # FOVEngine
+│       ├── generator.py        # DungeonGenerator
+│       └── session.py          # GameSession coordinator
+├── presentation/               # UI & Curses Engine Layer
+│   ├── __init__.py
+│   ├── inventoryController.py
+│   └── views.py                # Console rendering algorithms
+│
+└── data/                       # Storage & Run History Layer
+    ├── __init__.py
+    └── storage.py              # Serialization logic

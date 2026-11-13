@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe — Not Found</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tic-Tac-Toe</h1>
+        </header>
+
+        <div class="status error">Page not found</div>
+
+        <p class="subtitle" style="margin-bottom: 2rem;">
+            {% if uuid %}
+                No game with UUID <code>{{ uuid }}</code> exists.
+            {% else %}
+                The requested page does not exist.
+            {% endif %}
+        </p>
+
+        <a href="/" class="btn-new">New Game</a>
+    </div>
+</body>
+</html>
