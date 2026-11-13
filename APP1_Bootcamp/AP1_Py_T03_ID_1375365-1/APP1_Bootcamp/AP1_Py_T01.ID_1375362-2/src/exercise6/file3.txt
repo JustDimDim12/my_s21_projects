@@ -1,9 +1,0 @@
-{
-  "list1": [],
-  "list2": [
-    {
-      "title": "Terminator",
-      "year": 1984
-    }
-  ]
-}

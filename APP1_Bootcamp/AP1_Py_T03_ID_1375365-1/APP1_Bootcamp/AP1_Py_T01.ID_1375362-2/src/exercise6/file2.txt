@@ -1,9 +1,0 @@
-{
-  "list1": "str instead of list",
-  "list2": [
-    {
-      "title": "Terminator",
-      "year": 1984
-    }
-  ]
-}
