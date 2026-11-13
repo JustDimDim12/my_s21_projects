@@ -1,3 +1,9 @@
 [submodule "DevOps/DevOps/D01_Linux_ID_356272-1"]
 	path = DevOps/DevOps/D01_Linux_ID_356272-1
 	url = https://github.com/JustDimDim12/my_s21_projects
+[submodule "DevOps/DO2_LinuxNetwork_ID_356275-1"]
+	path = DevOps/DO2_LinuxNetwork_ID_356275-1
+	url = https://github.com/JustDimDim12/my_s21_projects.git
+[submodule "APP1_Bootcamp/AP1_Py_T03_ID_1375365-1"]
+	path = APP1_Bootcamp/AP1_Py_T03_ID_1375365-1
+	url = https://github.com/JustDimDim12/my_s21_projects.git
