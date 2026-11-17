@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tic-Tac-Toe</h1>
+            <p class="subtitle">
+                <span id="hello-user"></span>
+                &mdash; You play as <span id="my-mark" class="mark">?</span>
+            </p>
+        </header>
+
+        <!-- ==================== AUTH SCREEN ==================== -->
+        <div id="auth-screen" class="auth-screen">
+            <div class="auth-tabs">
+                <button id="tab-login" class="auth-tab active" type="button">Login</button>
+                <button id="tab-signup" class="auth-tab" type="button">Sign Up</button>
+            </div>
+
+            <form id="login-form" class="auth-form">
+                <input id="login-login" class="auth-input" type="text" placeholder="Login" autocomplete="username" required>
+                <input id="login-password" class="auth-input" type="password" placeholder="Password" autocomplete="current-password" required>
+                <button class="btn-new" type="submit">Login</button>
+            </form>
+
+            <form id="signup-form" class="auth-form hidden">
+                <input id="signup-login" class="auth-input" type="text" placeholder="Login (min 3)" autocomplete="username" required>
+                <input id="signup-password" class="auth-input" type="password" placeholder="Password (min 6)" autocomplete="new-password" required>
+                <button class="btn-new" type="submit">Sign Up</button>
+            </form>
+
+            <div id="auth-error" class="status error hidden"></div>
+        </div>
+
+        <!-- ==================== LOBBY SCREEN ==================== -->
+        <div id="lobby-screen" class="lobby-screen hidden">
+            <div class="mark-select">
+                <span class="subtitle">Your mark:</span>
+                <label class="mark-option">
+                    <input type="radio" name="mark" value="X" checked>
+                    <span class="mark x">X</span>
+                </label>
+                <label class="mark-option">
+                    <input type="radio" name="mark" value="O">
+                    <span class="mark o">O</span>
+                </label>
+            </div>
+
+            <div class="lobby-actions">
+                <button id="new-vs-computer" class="btn-new">vs Computer</button>
+                <button id="new-vs-player" class="btn-new">vs Player</button>
+                <button id="refresh-games" class="btn-new btn-secondary">Refresh</button>
+                <button id="logout-btn" class="btn-new btn-logout">Logout</button>
+            </div>
+
+            <h2 class="lobby-title">Your Games</h2>
+            <div id="my-games-list" class="games-list">
+                <p class="subtitle">Loading...</p>
+            </div>
+
+            <h2 class="lobby-title">Available Games</h2>
+            <div id="games-list" class="games-list">
+                <p class="subtitle">Loading...</p>
+            </div>
+        </div>
+
+        <!-- ==================== GAME SCREEN ==================== -->
+        <div id="game-screen" class="game-screen hidden">
+            <div id="status" class="status">Loading...</div>
+
+            <div class="lobby-actions">
+                <button id="new-vs-computer2" class="btn-new">vs Computer</button>
+                <button id="new-vs-player2" class="btn-new">vs Player</button>
+                <button id="logout-btn2" class="btn-new btn-logout">Logout</button>
+            </div>
+
+            <div class="board-container">
+                <div id="board" class="board">
+                    <div class="cell" data-row="0" data-col="0"></div>
+                    <div class="cell" data-row="0" data-col="1"></div>
+                    <div class="cell" data-row="0" data-col="2"></div>
+                    <div class="cell" data-row="1" data-col="0"></div>
+                    <div class="cell" data-row="1" data-col="1"></div>
+                    <div class="cell" data-row="1" data-col="2"></div>
+                    <div class="cell" data-row="2" data-col="0"></div>
+                    <div class="cell" data-row="2" data-col="1"></div>
+                    <div class="cell" data-row="2" data-col="2"></div>
+                </div>
+            </div>
+
+            <div class="game-actions">
+                <button id="back-to-lobby" class="btn-new btn-secondary">Back to Lobby</button>
+            </div>
+
+            <p id="game-uuid" class="game-uuid"></p>
+        </div>
+    </div>
+
+    <script src="/static/js/game.js"></script>
+</body>
+</html>
