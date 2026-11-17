@@ -16,5 +16,8 @@
 ## APP1_Bootcamp
 В этой папке хранятся все проекты из класстера APP1_Bootcamp (Bootcamp для Python).
 
+## APP1_Backend
+В этой папке хранятся все проекты из класстера APP1_Backend (Backend на Python).
+
 ## DevOps
 В этой папке хранятся все проекты по DevOps.
